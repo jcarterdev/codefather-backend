@@ -26,5 +26,6 @@ public class Flight{
     private Airport arrivalAirport;
     private Date departureTime;
     private Date arrivalTime;
-    private String aircraftType;
+    @ManyToOne
+    private Aircraft aircraft;
 }
