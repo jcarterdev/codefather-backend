@@ -1,7 +1,7 @@
 package com.swacorp.codefatherbackend.controller;
 
 import com.swacorp.codefatherbackend.model.Airport;
-import com.swacorp.codefatherbackend.repository.AirportRepository;
+import com.swacorp.codefatherbackend.service.AirportService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -11,14 +11,14 @@ import java.util.List;
 public class AirportController {
 
 
-    private final AirportRepository airportRepository;
+    private final AirportService airportService;
 
-    public AirportController(AirportRepository airportRepository) {
-        this.airportRepository = airportRepository;
+    public AirportController(AirportService airportService) {
+        this.airportService = airportService;
     }
 
     @GetMapping("/")
     public List<Airport> getAllAirports(){
-        return airportRepository.findAll();
+        return airportService.findAll();
     }
 }
