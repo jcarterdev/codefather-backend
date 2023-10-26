@@ -4,3 +4,4 @@
 * [Health Check](http://localhost:8080/actuator/health)
 * [Swagger UI](http://localhost:8080/swagger-ui.html)
 * [Swagger API](http://localhost:8080/v3/api-docs/)
+* [H2 console](http://localhost:8080/h2-console)
