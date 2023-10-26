@@ -58,6 +58,16 @@ VALUES
     (5, 3, 5, '10:30:00', '18:30:00'); -- Friday
 
 
+-- Insert sample data into Employee Table
+INSERT INTO Employee (id, first_name, last_name, seniority, shift_preference)
+VALUES
+    (1, 'John', 'Doe', 3, 'MORNING'),
+    (2, 'Jane', 'Smith', 2, 'AFTERNOON'),
+    (3, 'Michael', 'Johnson', 5, 'NIGHT'),
+    (4, 'Emily', 'Davis', 1, 'MORNING'),
+    (5, 'Robert', 'Brown', 4, 'AFTERNOON');
+
+
 INSERT INTO forecast(id, part_of_day, timestamp, number_of_flights)
 VALUES
     (1, 'morning','2023-09-01',10)
