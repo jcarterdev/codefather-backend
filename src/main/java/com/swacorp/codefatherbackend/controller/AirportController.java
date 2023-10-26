@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@RestController("/airports")
+@RestController
 public class AirportController {
 
 
@@ -17,7 +17,7 @@ public class AirportController {
         this.airportService = airportService;
     }
 
-    @GetMapping("/")
+    @GetMapping("/airports/")
     public List<Airport> getAllAirports(){
         return airportService.findAll();
     }
