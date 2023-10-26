@@ -10,4 +10,5 @@ public interface ForecastRepository extends CrudRepository<Forecast, Long> {
 
     List<Forecast> findByPartOfDay(String partOfDay);
     List<Forecast> findByTimestamp(Date timestamp);
+    List<Forecast> findByTimestampBetween(Date start, Date end);
 }

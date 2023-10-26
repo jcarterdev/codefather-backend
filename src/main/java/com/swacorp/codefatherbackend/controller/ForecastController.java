@@ -34,6 +34,16 @@ public class ForecastController {
         return forecastService.findByTimestamp(date);
     }
 
+    @GetMapping("/forecasts/date/{startDate}/{endDate}")
+    public List<Forecast> getForecastsByDate(@PathVariable String startDate, @PathVariable String endDate) throws ParseException {
+
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        Date start = sdf.parse(startDate);
+        Date end = sdf.parse(endDate);
+
+        return forecastService.findBetwenTimesamp(start, end);
+    }
+
     @GetMapping("/forecasts/shift/{shift}")
     public List<Forecast> getForecastsByShift(@PathVariable String shift){
         return forecastService.findByPartOfDay(shift);

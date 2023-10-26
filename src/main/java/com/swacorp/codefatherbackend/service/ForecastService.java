@@ -29,4 +29,8 @@ public class ForecastService {
     public List<Forecast> findByTimestamp(Date timestamp){
         return forecastRepository.findByTimestamp(timestamp);
     }
+
+    public List<Forecast> findBetwenTimesamp(Date start, Date end){
+        return forecastRepository.findByTimestampBetween(start, end);
+    }
 }
